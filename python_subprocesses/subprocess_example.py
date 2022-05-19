@@ -1,32 +1,35 @@
 import subprocess
 
-def sp1Run():
+#Run a process and output goes to sceen only
+def spRun():
   subprocess.run(['ls', '-l'])
 
-def sp1Call():
+#Same as above only using call instead of Run. 
+#Run is the prefered method
+def spCall():
   subprocess.call(['ls', '-l'])
 
-def sp1RunWithShellList():
+#run the command with a shell.
+#this does not run the '-l'
+def spRunWithShellListShell():
   subprocess.run(['ls', '-l'],shell=True)
 
-def sp1CallWithShellList():
-  subprocess.run(['ls', '-l'],shell=True)
-
-def sp1RunWithShellNoList():
+#This works just fine
+def spRunWithShellNoListshell():
   subprocess.run('ls -l',shell=True)
 
-def sp1CallWithShellNoList():
-  subprocess.run('ls -l',shell=True)
-
-def returnCode():
+#Get the return code from a process
+def spReturnCode():
   return_code =   subprocess.run('ls -l',shell=True,check=True)
   print(return_code)
 
+#Capute the output and print
+def spCaptureOutput():
+  cmd_output = subprocess.run('ls -l /', shell=True,capture_output=True)
+  print(cmd_output.stdout.decode())
+
 def main():
-  #sp1Run()
-  #p1Call()
-  #sp1RunWithShellNoList()
-  returnCode()
+  spCaptureOutput()
 
 if __name__ == "__main__":
   main()
