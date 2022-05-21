@@ -32,7 +32,6 @@ def runRemoteCommand(command='ls -l /'):
   #stdin, stdout and stderr are returned as output
   stdin, stdout, stderr = sshClient.exec_command(command)
 
-  
   #Output is returned as list so we have to itterate
   for i in stdout: 
     print(i.strip())
@@ -54,5 +53,7 @@ def copyToRemote():
   sftpClient.put('/etc/hosts', '/tmp/hosts_put_test')
 
 if __name__ == '__main__':
-  copyToRemote()
+  #copyToRemote()
+  #copyFromRemote()
+  #runRemoteCommand()
 
