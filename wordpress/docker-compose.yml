@@ -26,7 +26,7 @@ services:
     user: "www-data"
     restart: "always"
     environment:
-      WORDPRESS_DB_HOST: "192.168.10.164"
+      WORDPRESS_DB_HOST: "db"
       WORDPRESS_DB_USER: "wordpress"
       WORDPRESS_DB_PASSWORD: "wordpress"
       WORDPRESS_DB_NAME: "wordpress"
@@ -36,7 +36,7 @@ services:
     environment:
       - APACHE_RUN_USER="www-data"
       - APACHE_RUN_GROUP="www-data"
-      - WORDPRESS_DB_HOST=192.168.10.164
+      - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=wordpress
       - WORDPRESS_DB_PASSWORD=wordpress
       - WORDPRESS_DB_NAME=wordpress
